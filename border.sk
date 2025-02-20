@@ -1,5 +1,5 @@
 options:
-    p: &c( 배틀로얄 ) &f
+    p: &c( Abilitywar ) &f
 
 function setBordercenter(prevsize: number, xLoc1: number,zLoc1: number,xLoc2: number,zLoc2: number,time: number):
     set {BR.flag.isshrinking} to true
@@ -111,21 +111,3 @@ function brIsinnextborder(x: number,z: number,phase: number) :: boolean:
         if {_z} is between ({_centerz} - {_newsize}/2) and ({_centerz} + {_newsize}/2):
             return true
     return false
-
-command /testborder:
-    trigger:
-        brBorderinit()
-command /testborder2:
-    trigger:
-        brShrinkborder()
-
-command /brdebug:
-    trigger:
-        set {BR.debug} to true
-        wait 1 second
-        set {BR.debug} to false
-        set {BR.flag.isshrinking} to false
-
-command /brdebug2:
-    trigger:
-        set {BR.flag.gametime} to {BR.delay} - 5
