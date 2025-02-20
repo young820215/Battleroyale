@@ -1,5 +1,5 @@
 options:
-    p: &c( 배틀로얄 ) &f
+    p: &c( Abilitywar ) &f
 
 function setBordercenter(prevsize: number, xLoc1: number,zLoc1: number,xLoc2: number,zLoc2: number,time: number):
     set {BR.flag.isshrinking} to true
